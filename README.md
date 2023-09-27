@@ -16,8 +16,11 @@ Para usar a aplição:
 
 Instale:
 1.Clone o repositório ou baixe o código-fonte para sua máquina local
+
 2.cd weather-app
+
 3.Crie um .envarquivo no diretório raiz do seu projeto e adicione sua chave de API OpenWeatherMap a ele:API_KEY=your_openweathermap_api_key_here
+
 4.Instale os pacotes Node.js necessários executando o seguinte comando: npm install
 
 Uso:
