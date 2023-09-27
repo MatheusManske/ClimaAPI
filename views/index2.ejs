@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #painelClima {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 5px;
+            height: 85%;
+        }
+
+        h2 {
+            font-size: 70px;
+            color:#012a45;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: #012a45;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-image: url('https://images.pexels.com/photos/108941/pexels-photo-108941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: 1900px;
+            background-position: center;
+            background-color: lightseagreen;
+        }
+
+        form {
+            color: wheat;
+            background-color: lightseagreen;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="/clima">
+        <input type="text" name="nomeCidade" id="nomeCidade" placeholder="Digite a sua cidade">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2> Enter the name of the city <br><span style="font-size: 40px;"> click submit to see the weather </span></h2>
+    <%- include("partials/footer.ejs") %>
+</body </html>

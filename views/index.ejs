@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #painelClima {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 5px;
+            height: 85%;
+            backdrop-filter: blur(10px);
+
+        }
+
+        h2 {
+            font-size: xx-large;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: #012a45;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+
+        .nublado {
+            background-image: url('https://images.pexels.com/photos/1363873/pexels-photo-1363873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: 1900px;
+            background-position: center;
+            background-color: lightseagreen;
+        }
+
+        .sol {
+            background-image: url('https://cdn.cgn.inf.br/cgn-cdn/fotos-cgn/2021/04/08054953/sunny-day.jpg');
+            background-size: 1900px;
+            background-position: center;
+            background-color: lightseagreen;
+            
+        }
+
+        form {
+            color: wheat;
+            background-color: lightseagreen;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #loca{
+            width: 1000px;
+            margin-right: 150px;
+        }
+
+        #graus{
+            width: 1000px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body class="<%= clima === "Clouds" ? 'nublado' : (clima === "Clear" ? 'sol' : '') %>">
+
+    <form method="POST" action="/clima">
+        <input type="text" name="nomeCidade" id="nomeCidade" placeholder="Digite a sua cidade">
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="painelClima">
+        <div id="loca">
+            <h2>
+                📍
+               s
+                <%= cidade %> 
+            </h2>
+            <h3>
+                🌎
+                <br>
+                <%= pais %>
+            </h3>
+        </div>
+        <div id="graus">
+            <h2>
+                🌡<%= temp %>ºC
+            </h2>
+            <h3> 🌡<%= mini %> / <%= max %></h3>
+            <h5> 💧humidity <%=umd %>%</h5>
+            <h5>
+                ☁️<%= clima %>
+            </h5>
+        </div>
+    </div>
+
+    <div>
+         
+    </div>
+</body </html>
